@@ -150,22 +150,24 @@ def get_back(matrix):
 #    [615, -72, 71, 51, 6712, 15]
 #]
 
-var = input("a) транспортировать b) умножить c) определить ранг d) получить обратную матрицу\n")
-if var in ["a", "b", "c", "d"]:
-    m, n = map(int, input("Введите размер матрицы 1(m n)\n").split())
-    print("Введите матрицу")
-    matrix_1 = input_matrix(m, n)
-    if var == "a":
-        print_m(transort(matrix_1))
-    if var == "b":
-        p, k = map(int, input("Введите размер матрицы 2(m n)\n").split())
+
+if __name__ == "__main__":
+    var = input("a) транспортировать b) умножить c) определить ранг d) получить обратную матрицу\n")
+    if var in ["a", "b", "c", "d"]:
+        m, n = map(int, input("Введите размер матрицы 1(m n)\n").split())
         print("Введите матрицу")
-        matrix_2 = input_matrix(p, k)
-        print_m(multiply(matrix_1, matrix_2))
-    if var == "c":
-        print(rank(matrix_1))
-    if var == "d":
-        print_m(get_back(matrix_1))
-else:
-    print("Ошибка")
+        matrix_1 = input_matrix(m, n)
+        if var == "a":
+            print_m(transort(matrix_1))
+        if var == "b":
+            p, k = map(int, input("Введите размер матрицы 2(m n)\n").split())
+            print("Введите матрицу")
+            matrix_2 = input_matrix(p, k)
+            print_m(multiply(matrix_1, matrix_2))
+        if var == "c":
+            print(rank(matrix_1))
+        if var == "d":
+            print_m(get_back(matrix_1))
+    else:
+        print("Ошибка")
 
