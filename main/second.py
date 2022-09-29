@@ -122,7 +122,6 @@ def get_back(matrix):
         raise Exception("не квадртаная матрица 3 порядка")
     else:
         new_matrix = [[0 for j in range(3)] for i in range(3)]
-        print_m(new_matrix)
         det_A = get_opr(matrix)
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
